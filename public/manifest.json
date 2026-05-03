@@ -1,6 +1,6 @@
 {
-  "name": "SplitByKittu",
-  "short_name": "SplitByKittu",
+  "name": "SplitVerse",
+  "short_name": "SplitVerse",
   "description": "Split expenses for travel and work groups",
   "start_url": "/",
   "display": "standalone",

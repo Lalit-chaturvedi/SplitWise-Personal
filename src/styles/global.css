@@ -51,7 +51,20 @@ img { display: block; max-width: 100%; }
   min-height: 100dvh;
 }
 .splash-inner { text-align: center; }
-.splash-logo { font-size: 3rem; display: block; margin-bottom: .5rem; }
+.splash-logo {
+  display: block;
+  margin-bottom: 1rem;
+  line-height: 0;
+}
+.splash-logo svg {
+  filter: drop-shadow(0 8px 32px rgba(108, 99, 255, 0.6)) drop-shadow(0 2px 8px rgba(255, 101, 132, 0.3));
+  border-radius: 18px;
+  animation: logoPulse 3s ease-in-out infinite;
+}
+@keyframes logoPulse {
+  0%, 100% { filter: drop-shadow(0 8px 32px rgba(108,99,255,.6)) drop-shadow(0 2px 8px rgba(255,101,132,.3)); }
+  50% { filter: drop-shadow(0 8px 48px rgba(108,99,255,.9)) drop-shadow(0 4px 16px rgba(255,101,132,.5)); }
+}
 .splash-inner h1 {
   font-family: 'Syne', sans-serif; font-size: 1.8rem; font-weight: 800;
   background: linear-gradient(135deg, var(--accent), var(--accent2));
@@ -78,7 +91,15 @@ img { display: block; max-width: 100%; }
   box-shadow: var(--shadow);
 }
 .auth-brand { text-align: center; margin-bottom: 1.5rem; }
-.auth-logo { font-size: 2.5rem; display: block; margin-bottom: .5rem; }
+.auth-logo {
+  display: block;
+  margin-bottom: 0.75rem;
+  line-height: 0;
+}
+.auth-logo svg {
+  filter: drop-shadow(0 6px 24px rgba(108, 99, 255, 0.55)) drop-shadow(0 2px 6px rgba(255, 101, 132, 0.25));
+  border-radius: 18px;
+}
 .auth-brand h1 {
   font-family: 'Syne', sans-serif; font-size: 1.7rem; font-weight: 800;
   background: linear-gradient(135deg, var(--accent), var(--accent2));

@@ -1,4 +1,4 @@
-# ✂ SplitByKittu
+# ✂ SplitVerse
 
 A production-ready, PWA expense-splitting app for travel and work groups — built with React + Firebase.
 
@@ -25,14 +25,14 @@ A production-ready, PWA expense-splitting app for travel and work groups — bui
 
 ```bash
 git clone <your-repo>
-cd splitbykittu
+cd SplitVerse
 npm install
 ```
 
 ### 2. Create a Firebase Project
 
 1. Go to [console.firebase.google.com](https://console.firebase.google.com)
-2. Create a new project (e.g. `splitbykittu`)
+2. Create a new project (e.g. `SplitVerse`)
 3. Enable **Authentication** → Sign-in methods:
    - Email/Password ✓
    - Google ✓
@@ -98,7 +98,7 @@ firebase deploy
 ## 🗂 Project Structure
 
 ```
-splitbykittu/
+SplitVerse/
 ├── src/
 │   ├── firebase.js              # Firebase init (edit this!)
 │   ├── App.jsx                  # Router

@@ -9,8 +9,8 @@ export default defineConfig({
       registerType: "autoUpdate",
       includeAssets: ["favicon.svg", "icon-192.png", "icon-512.png"],
       manifest: {
-        name: "SplitByKittu",
-        short_name: "SplitByKittu",
+        name: "SplitVerse",
+        short_name: "SplitVerse",
         description: "Split expenses for travel and work groups",
         theme_color: "#6c63ff",
         background_color: "#0a0a0f",

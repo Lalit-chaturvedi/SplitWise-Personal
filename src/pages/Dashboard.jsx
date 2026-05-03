@@ -62,7 +62,7 @@ export default function Dashboard({ onOpenGroup, onProfile }) {
       {/* Header */}
       <header className="dash-header">
         <div>
-          <h2>SplitByKittu</h2>
+          <h2>SplitVerse</h2>
           <p className="dash-sub">Hey {profile?.displayName?.split(" ")[0] || "there"} 👋</p>
         </div>
         <button className="avatar-btn" onClick={onProfile}>
