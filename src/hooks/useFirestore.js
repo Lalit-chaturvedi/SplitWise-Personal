@@ -24,12 +24,13 @@ export function useMyGroups(uid) {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    if (!uid) return;
+    if (!uid) { setLoading(false); return; }
     const q = query(collection(db, "groups"), where("memberIds", "array-contains", uid));
-    const unsub = onSnapshot(q, (snap) => {
-      setGroups(snap.docs.map((d) => ({ id: d.id, ...d.data() })));
-      setLoading(false);
-    });
+    const unsub = onSnapshot(
+      q,
+      (snap) => { setGroups(snap.docs.map((d) => ({ id: d.id, ...d.data() }))); setLoading(false); },
+      (err) => { console.error("groups:", err); setLoading(false); }
+    );
     return unsub;
   }, [uid]);
 

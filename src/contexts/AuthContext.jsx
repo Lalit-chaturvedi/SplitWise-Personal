@@ -46,8 +46,11 @@ export function AuthProvider({ children }) {
   useEffect(() => {
     const unsub = onAuthStateChanged(auth, async (u) => {
       setUser(u);
-      if (u) await upsertProfile(u);
-      else setProfile(null);
+      if (u) {
+        try { await upsertProfile(u); } catch (e) { console.error("profile:", e); }
+      } else {
+        setProfile(null);
+      }
       setLoading(false);
     });
     return unsub;
